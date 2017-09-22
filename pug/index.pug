@@ -1,0 +1,8 @@
+doctype html
+html(ng-app='app')
+  include components/head
+
+  body(ng-controller='CoreController')
+    .container: .row: .col-xs-12: .ng-view
+
+    canvas.background

@@ -1,0 +1,19 @@
+@text: white;
+
+
+body {
+  margin: 0;
+  background-image: url("../test.png");
+  background-color: black; 
+  color: @text;
+}
+
+.background {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: -100;
+}
+
+@import "main";

@@ -1,0 +1,27 @@
+{
+  "name": "m214-instruktionen",
+  "version": "1.0.0",
+  "description": "School work in form of a website instead of powerpoint since that would be boring",
+  "main": "index.js",
+  "scripts": {
+    "grunt": "./node_modules/grunt/bin/grunt",
+    "watch": "./node_modules/grunt/bin/grunt watch"
+  },
+  "author": "Austin Albrecht",
+  "license": "AGPL-3.0",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-less": "^1.4.1",
+    "grunt-contrib-pug": "^1.0.0",
+    "grunt-contrib-uglify": "^3.0.1",
+    "grunt-contrib-watch": "^1.0.0"
+  },
+  "dependencies": {
+    "angular": "~1.6.6",
+    "angular-route": "^1.6.6",
+    "bootstrap": "~3.3.7",
+    "jquery": "^3.2.1",
+    "particlesjs": "^2.0.2"
+  }
+}
