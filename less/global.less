@@ -1,12 +1,28 @@
+/**
+ * Colours
+ */
 @text: white;
-
+@primary: purple;
+@transparency: rgba(255, 255, 255, 0);
 
 body {
   margin: 0;
-  background-image: url("../test.png");
-  background-color: black; 
+
+  background-image: url("../background.png");
+  background-color: black;
   color: @text;
+
+  font-family: 'Open Sans', sans-serif;
+
 }
+
+.hClass (@index) when (@index > 0) {
+  h@{index} {
+    font-family: 'Ubuntu', sans-serif;
+  }
+  .hClass(@index - 1);
+}
+.hClass(6);
 
 .background {
   position: absolute;
@@ -16,4 +32,42 @@ body {
   z-index: -100;
 }
 
+.nav-tabs > li > a {
+  color: @text;
+  border: 1px solid @text;
+  &:focus {
+    background-color: @transparency;
+    outline: 0;
+  }
+  &:hover {
+    background-color: fade(@primary, 20%);
+  }
+
+}
+
+.infoBox {
+  border-top: 1px solid @text;
+  border-bottom: 1px solid @text;
+}
+
+.activeTab() {
+  color: @text;
+  border: 1px solid @primary;
+  border-bottom-color: @text;
+  background-color: fade(@primary, 40%);
+}
+
+.nav-tabs > li.active > a {
+  .activeTab();
+  &:hover {
+    .activeTab();
+  }
+  &:focus {
+    .activeTab();
+    outline: 0;
+  }
+}
+
+
 @import "main";
+@import "moderator-und-fragearten";

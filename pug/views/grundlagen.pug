@@ -1,1 +1,29 @@
-p 6.1 Grundlagen
+include ../components/mixins
+.container
+  .row
+    .col-xs-12
+        h1 6.1 Grundlagen der Kommunikation
+
+  .row
+    .col-xs-12
+      uib-tabset(active="active")
+        uib-tab(index="0" heading="Grundlagen")
+          +infoBox("51", "6.1")
+          .row
+            .col-sm-12
+              p Text
+        uib-tab(index="1" heading="Die vier Seiten der Kommunikation")
+          +infoBox("52", "6.1.1")
+          .row
+            .col-sm-12
+              p (reminder: also include graphic)
+              p Sachinhalt
+              p Appell
+              p Beziehung
+              p Selbstoffenbarung
+        uib-tab(index="2" heading="Kommunikationsstörungen")
+          +infoBox("52", "6.1.2")
+          .row
+            .col-sm-12
+              p info from book is little, maybe include own examples
+        uib-tab.pull-right(index="100" heading="Back" ng-click="$location.url('/')")

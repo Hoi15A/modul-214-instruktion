@@ -1,0 +1,18 @@
+.btn-back {
+  color: @text;
+  border: 1px solid @text;
+  background-color: @transparency;
+  &:hover {
+    color: @text;
+    border: 1px solid @text;
+    background-color: fade(@primary, 20%);
+  }
+  &:active,
+  &:focus,
+  &:active &:focus {
+    color: @text;
+    outline: 0;
+    border: 1px solid @primary;
+    background-color: fade(@primary, 40%);
+  }
+}

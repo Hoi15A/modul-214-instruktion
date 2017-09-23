@@ -1,9 +1,9 @@
 // eslint-disable-next-line
-var app = angular.module('app', ['ngRoute'])
+var app = angular.module('app', ['ngRoute', 'ui.bootstrap'])
 
 app.run(['$rootScope', '$route', function ($rootScope, $route) {
   $rootScope.$on('$routeChangeSuccess', function () {
-    document.title = $route.current.title + ' | Informationen Beschaffen'
+    document.title = $route.current.title + ' | M214'
   })
 }])
 

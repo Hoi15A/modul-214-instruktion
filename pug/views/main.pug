@@ -5,12 +5,18 @@
         h1 Kapitel 6.1-6.3
         h3 Austin Albrecht
   .row
-    .col-sm-4: .tile: .tileContent
-      h1 6.1
-      h2 Grundlagen der Kommunikation
-    .col-sm-4: .tile: .tileContent
-      h1 6.2
-      h2 Moderator und Fragetechniken
-    .col-sm-4: .tile: .tileContent
-      h1 6.3
-      h2 Fragearten
+    .col-md-4(ng-click="$location.url('/grundlagen')")
+      .tile: .tileContent
+        h1 6.1
+        h2 Grundlagen der Kommunikation
+      br
+    .col-md-4(ng-click="$location.url('/moderator-und-fragetechniken')")
+      .tile: .tileContent
+        h1 6.2
+        h2 Moderator und Fragetechniken
+      br
+    .col-md-4(ng-click="$location.url('/fragearten')")
+      .tile: .tileContent
+        h1 6.3
+        h2 Fragearten
+      br

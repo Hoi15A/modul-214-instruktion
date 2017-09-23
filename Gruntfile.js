@@ -15,7 +15,9 @@ module.exports = function (grunt) {
 
           /* Sub-views */
           'html/views/main.html': ['pug/views/main.pug'],
-          'html/views/grundlagen.html': ['pug/views/grundlagen.pug']
+          'html/views/grundlagen.html': ['pug/views/grundlagen.pug'],
+          'html/views/moderator-und-fragetechniken.html': ['pug/views/moderator-und-fragetechniken.pug'],
+          'html/views/fragearten.html': ['pug/views/fragearten.pug']
         }
       }
     },
@@ -27,6 +29,8 @@ module.exports = function (grunt) {
             'node_modules/bootstrap/dist/js/bootstrap.min.js',
             'node_modules/angular/angular.min.js',
             'node_modules/angular-route/angular-route.min.js',
+            'node_modules/angular-animate/angular-animate.min.js',
+            'node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js',
             'node_modules/particlesjs/dist/particles.min.js',
             'js/core.js',
             'js/routes.js',
