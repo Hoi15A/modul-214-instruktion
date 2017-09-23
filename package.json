@@ -7,8 +7,16 @@
     "grunt": "./node_modules/grunt/bin/grunt",
     "watch": "./node_modules/grunt/bin/grunt watch"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hoi15A/modul-214-instruktion.git"
+  },
   "author": "Austin Albrecht",
   "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Hoi15A/modul-214-instruktion/issues"
+  },
+  "homepage": "https://github.com/Hoi15A/modul-214-instruktion#readme",
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-contrib-cssmin": "^2.2.1",
