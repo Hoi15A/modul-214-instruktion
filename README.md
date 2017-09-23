@@ -1,5 +1,4 @@
 # M214 Instruktionen
-<hr>
 A website for a school project which is pretty boring.
 Mainly exists because I dont want to deal with Powerpoint and such.
 
