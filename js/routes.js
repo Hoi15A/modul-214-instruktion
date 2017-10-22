@@ -8,7 +8,8 @@ app.config(function ($routeProvider, $locationProvider) {
     })
     .when('/grundlagen', {
       title: '6.1 Grundlagen der Kommunikation',
-      templateUrl: 'views/grundlagen.html'
+      templateUrl: 'views/grundlagen.html',
+      controller: 'GrundlagenController'
     })
     .when('/moderator-und-fragetechniken', {
       title: '6.2 Moderator und Fragetechniken',
