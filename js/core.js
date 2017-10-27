@@ -12,6 +12,8 @@ app.controller('CoreController', function ($scope, $route, $routeParams, $locati
   $scope.$location = $location
   $scope.$routeParams = $routeParams
 
+  $scope.displayParticles = true
+
   $document.bind('keypress', function (e) {
     switch (e.which) {
       case 0: // esc

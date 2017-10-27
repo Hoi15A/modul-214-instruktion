@@ -16,3 +16,36 @@
     background-color: fade(@primary, 40%);
   }
 }
+
+.content {
+
+  color: @text;
+  background-color: fade(@text, 10);
+  border: 1px solid @text;
+
+  padding-left: 15px;
+  padding-right: 15px;
+
+  p {
+    font-size: 18px;
+  }
+
+  ul li {
+    padding-bottom: 10px;
+  }
+
+  img {
+    height: 75px;
+    width: auto;
+    opacity: 0.05;
+    position: absolute;
+    top: 1px;
+    right: 16px;
+    animation: fade 60s infinite;
+  }
+}
+
+@keyframes fade {
+  0%,100% { opacity: 0 }
+  50% { opacity: 0.3 }
+}

@@ -11,19 +11,72 @@ include ../components/mixins
           +infoBox("51", "6.1")
           .row
             .col-sm-12
-              p Text
+              h4 <span class="bold">Kommunikation</span> ist der gegenseitige Austausch von Gedanken in form der Sprache, Schift oder Bild.
+              h4 <span class="bold">Informationsübertragung</span> ist der Vorgang bei dem Information von einem Sender zu einem Empfänger an einem anderem Ort zu übermitteln.
+
         uib-tab(index="1" heading="Die vier Seiten der Kommunikation")
           +infoBox("52", "6.1.1")
           .row
-            .col-sm-12
-              p (reminder: also include graphic)
-              p Sachinhalt
-              p Appell
-              p Beziehung
-              p Selbstoffenbarung
+            .col-sm-6
+              .vier-seiten-graphic-container
+                img.img-responsive(src="./seiten.png", alt="Vier seiten der Kommunikation")
+            .col-sm-3
+              h2 Sender
+              p.
+                Eine Person die Informationen an einen Empfänger übertragen will.
+                Dies kann z.b. ein Supportmitarbeiter sein.
+            .col-sm-3
+              h2 Empfänger
+              p.
+                Eine Person die Informationen benöigt.
+                Dies kann ein normaler Mitarbeiter sein der z.b. probleme mit dem Drucker hat.
+          .row
+            .col-sm-3
+              h2 Sachinhalt
+              p.
+                Dies ist die wichtigste Seite der Kommunikation.
+                Der Sachinhalt ist die eigentliche Information die Übertragen werden soll.
+                Z.b. die genaue Anleitung um einen Papierstau im Drucker zu lösen.
+
+            .col-sm-3
+              h2 Selbstoffenbarung
+              p.
+                Bei jeder aussage enthüllt eine Person etwas üer sich selbst.
+                Dies passiert generell unbewusst
+            .col-sm-3
+              h2 Beziehung
+              p.
+                Die Beziehungsebene beschreibt wie der Sprecher und hörer zu einander stehen.
+                Dies beeinflusst sachen wie Wertschätzung, Respekt für einander.
+            .col-sm-3
+              h2 Appell
+              p.
+                Wer sich äussert will normalerweise auch etwas bewirken.
+                Mit einem Appell will der Sprecher den Hörer dazu bringen etwas zu tun oder zu unterlassen.
+                Wenn dies verdeckt gemacht wird wird dies als Manipulation bezeichnet.
         uib-tab(index="2" heading="Kommunikationsstörungen")
           +infoBox("52", "6.1.2")
           .row
             .col-sm-12
-              p info from book is little, maybe include own examples
+              h4 Die Kommunikation kann vorallem durch Misverständnisse gestört werden. Ein anderer grund kann aber z.b. eine Technische störung sein.
+              h4 Beispiele:
+          .row
+            .col-sm-3
+              h5 Misverständnis
+              pre.example.
+                Let's eat grandma
+                Let's eat, grandma
+            .col-sm-3
+              h5 Technische störung
+              ul
+                li Stromausfall
+                li Netzwerkprobleme
+
+            .col-sm-3
+              h5 Störung durch andere Person
+              ul
+                li Redet über andere
+                li Macht lärm
+                li Lenkt andere teilnehmer ab
+
         uib-tab.pull-right(index="100" heading="Back" ng-click="$location.url('/')")

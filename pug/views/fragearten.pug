@@ -8,6 +8,13 @@ include ../components/mixins
       button.btn.btn-back.pull-right(ng-click="$location.url('/')")
         | Back
   +infoBox("{{infoBox.page}}", "6.3.{{infoBox.subChapter}} {{infoBox.title}}")
+  .row
+    .col-xs-12
+      h4.
+        Um Informationen zu beschaffen, muss man gezielte Fragen stellen können.
+        Es gibt verschiedene Arten von Fragen mit denen unterschiedliche Informationen erhalten werden können.
+        Am meisten werden offene und geschlossene Fragen benutzt.
+      br
   .row(ng-init="infoBox.page = '53'; infoBox.subChapter = 1; infoBox.title = '- Offene Frage'")
     .col-md-4(ng-mouseover="infoBox.page = '53'; infoBox.subChapter = 1; infoBox.title = '- Offene Frage'")
       .frageArt
