@@ -2,12 +2,8 @@ include ../components/mixins
 .container
   .row
     .col-xs-12
-        h1 6.3 Fragearten
-  .row
-    .col-xs-12
-      button.btn.btn-back.pull-right(ng-click="$location.url('/')")
-        | Back
-  +infoBox("{{infoBox.page}}", "6.3.{{infoBox.subChapter}} {{infoBox.title}}")
+      h1 6.3 Fragearten
+  +infoBox("53-55", "6.3.1-6.3.7")
   .row
     .col-xs-12
       h4.
@@ -15,81 +11,96 @@ include ../components/mixins
         Es gibt verschiedene Arten von Fragen mit denen unterschiedliche Informationen erhalten werden können.
         Am meisten werden offene und geschlossene Fragen benutzt.
       br
-  .row(ng-init="infoBox.page = '53'; infoBox.subChapter = 1; infoBox.title = '- Offene Frage'")
-    .col-md-4(ng-mouseover="infoBox.page = '53'; infoBox.subChapter = 1; infoBox.title = '- Offene Frage'")
-      .frageArt
-        h4 Offene Frage
-        ul
-          li Auch als W-Frage bekannt (wer?, was?, wie?, etc..)
-          li Lässt verschiedene antworten zu
-        span Beispiele:
-        .example.
-          Q: Wie soll ich dieses Problem lösen?
-          A: Ich weiss nicht, frag Sexyboy69.
-          Q: Wer ist für den neat.moe Webserver verantwortlich?
-          A: Das wäre Austin.
-    .col-md-4(ng-mouseover="infoBox.page = '53-54'; infoBox.subChapter = 2; infoBox.title = '- Geschlossene Frage'")
-      .frageArt
-        h4 Geschlossene Frage
-        ul
-          li Kann nur mit Ja oder Nein beantwortet werden
-          li Sollte nicht verwendet werden um spezifischen inhalt zu bekommen
-        span Beispiele:
-        .example.
-          Q: Sollen wir React benutzen?
-          A: Nein, Angular ist besser.
-          Q: Kann ich in javascript das ; wegfallen lassen?
-          A: Ja, es sollte keinen unterschied machen.
-    .col-md-4(ng-mouseover="infoBox.page = '54'; infoBox.subChapter = 3; infoBox.title = '- Gegenfrage'")
-      .frageArt
-        h4 Gegenfrage
-        ul
-          li Jede Frage fordert eine Antwort. Um dies zu entkommen kann man eine Frage mit einer Gegenfrage beantworten.
-          li Wird genutzt um präzis zu erfahren was für Information gesucht ist.
-          li Kann z.b. im Wiederholungsfall provozierend wirken
-        span Beispiel:
-        .example.
-          Q: Wie lange arbeitest du schon an diesem Projekt?
-          A: Nur heute oder die gesamte Zeit?
-    .col-md-4(ng-mouseover="infoBox.page = '54'; infoBox.subChapter = 4; infoBox.title = '- Rhetorische Fragen'")
-      .frageArt
-        h4 Rhetorische Fragen
-        ul
-          li Dienen nicht zum Informationsgewinn
-          li Wird normalerweise genutzt um die Gegenmeinung zu untergraben
-        span Beispiel:
-        .example.
-          Das solltest du in wenigen minuten fertigstellen können!
-          Q: Warum machst du das nicht schneller da du ja so ein experte bist?
-    .col-md-4(ng-mouseover="infoBox.page = '54'; infoBox.subChapter = 5; infoBox.title = '- Alternativfragen'")
-      .frageArt
-        h4 Alternativfragen
-        ul
-          li Dient zur entscheidung zwischen zwei Möglichkeiten
-          li Kann eine gruppe in zwei seiten Spalten
-        span Beispiele:
-        .example.
-          Q: Was ist besser, Telegram oder WhatsApp?
-          Q: Essen wir bei McDonalds oder BurgerKing?
-    .col-md-4(ng-mouseover="infoBox.page = '54'; infoBox.subChapter = 6; infoBox.title = '- Suggestivfragen'")
-      .frageArt
-        h4 Suggestivfragen
-        ul
-          li Probiert den Gefragten zur zustimmung zu bewegen
-        span Beispiele:
-        .example.
-          Q: Wäre es nicht besser Debian statt Windows für das Projekt zu nutzen?
-          Q: Bist du auch der Meinung dass dieses Thema langweilig ist?
-          Q: Gefällt dir das nicht?
-    .col-md-4(ng-mouseover="infoBox.page = '55'; infoBox.subChapter = 7; infoBox.title = '- Zurückgegebene Frage'")
-      .frageArt
-        h4 Zurückgegebene Frage
-        ul
-          li Eine Frage die auf inhalte gerichtet ist, die aber vom Moderator an die gruppe zurückgegeben wird
-        span Beispiele:
-        .example.
-          Ich verstehe Teil 2 nicht.
-          Q: Wer kann Teil 2 so erklären dass es einfach verständlich ist?
+  .row
+    .col-sm-12
+      uib-tabset(active="currentTab")
+        uib-tab(index="0" heading="Offene, Geschlossene & Gegenfragen")
+          .row
+            br
+            .col-md-4
+              .frageArt
+                h4 Offene Frage
+                ul
+                  li Auch als W-Frage bekannt (wer?, was?, wie?, etc..)
+                  li Lässt verschiedene antworten zu
+                span Beispiele:
+                .example.
+                  Q: Wie soll ich dieses Problem lösen?
+                  A: Ich weiss nicht, frag Sexyboy69.
+                  Q: Wer ist für den neat.moe Webserver verantwortlich?
+                  A: Das wäre Austin.
+            .col-md-4
+              .frageArt
+                h4 Geschlossene Frage
+                ul
+                  li Kann nur mit Ja oder Nein beantwortet werden
+                  li Sollte nicht verwendet werden um spezifischen inhalt zu bekommen
+                span Beispiele:
+                .example.
+                  Q: Sollen wir React benutzen?
+                  A: Nein, Angular ist besser.
+                  Q: Kann ich in javascript das ; wegfallen lassen?
+                  A: Ja, es sollte keinen unterschied machen.
+            .col-md-4
+              .frageArt
+                h4 Gegenfrage
+                ul
+                  li Jede Frage fordert eine Antwort. Um dies zu entkommen kann man eine Frage mit einer Gegenfrage beantworten.
+                  li Wird genutzt um präzis zu erfahren was für Information gesucht ist.
+                  li Kann z.b. im Wiederholungsfall provozierend wirken
+                span Beispiel:
+                .example.
+                  Q: Wie lange arbeitest du schon an diesem Projekt?
+                  A: Nur heute oder die gesamte Zeit?
 
-          Wäre es nicht besser X zuerst zu behandeln?
-          Q: Was meint der Rest der Gruppe?
+        uib-tab(index="1" heading="Rhetorische & Alternativfragen")
+          .row
+            br
+            .col-md-4
+              .frageArt
+                h4 Rhetorische Fragen
+                ul
+                  li Dienen nicht zum Informationsgewinn
+                  li Wird normalerweise genutzt um die Gegenmeinung zu untergraben
+                span Beispiel:
+                .example.
+                  Das solltest du in wenigen minuten fertigstellen können!
+                  Q: Warum machst du das nicht schneller da du ja so ein experte bist?
+            .col-md-4
+              .frageArt
+                h4 Alternativfragen
+                ul
+                  li Dient zur entscheidung zwischen zwei Möglichkeiten
+                  li Kann eine gruppe in zwei seiten Spalten
+                span Beispiele:
+                .example.
+                  Q: Was ist besser, Telegram oder WhatsApp?
+                  Q: Essen wir bei McDonalds oder BurgerKing?
+
+        uib-tab(index="2" heading="Suggestiv & Zurückgegebene Fragen")
+          .row
+            br
+            .col-md-4
+              .frageArt
+                h4 Suggestivfragen
+                ul
+                  li Probiert den Gefragten zur zustimmung zu bewegen
+                span Beispiele:
+                .example.
+                  Q: Wäre es nicht besser Debian statt Windows für das Projekt zu nutzen?
+                  Q: Bist du auch der Meinung dass dieses Thema langweilig ist?
+                  Q: Gefällt dir das nicht?
+            .col-md-4
+              .frageArt
+                h4 Zurückgegebene Frage
+                ul
+                  li Eine Frage die auf inhalte gerichtet ist, die aber vom Moderator an die gruppe zurückgegeben wird
+                span Beispiele:
+                .example.
+                  Ich verstehe Teil 2 nicht.
+                  Q: Wer kann Teil 2 so erklären dass es einfach verständlich ist?
+
+                  Wäre es nicht besser X zuerst zu behandeln?
+                  Q: Was meint der Rest der Gruppe?
+
+        uib-tab.pull-right(index="100" heading="Back" ng-click="$location.url('/')")
